@@ -53,7 +53,7 @@ class RestaurantCell: UITableViewCell {
     
     //MARK: View Configuration
     func configViews() {
-        
+        backgroundColor = .white
     }
     
     func buildViews() {
