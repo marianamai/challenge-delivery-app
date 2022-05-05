@@ -17,7 +17,19 @@ class RestaurantListView: UIView, UITableViewDelegate, UITableViewDataSource {
         return tableview
     }()
     
-    private let cell = RestaurantCell()
+    override init(frame: CGRect) {
+        super.init(frame: .zero)
+        configViews()
+        buildViews()
+        setupConstraints()
+        tableView.dataSource = self
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private let cell = RestaurantCell.identifier
     
     func configViews() {
         backgroundColor = .white
